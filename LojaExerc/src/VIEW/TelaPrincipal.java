@@ -30,10 +30,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         MenuCadastroCliente = new javax.swing.JMenuItem();
+        menuListarVendas = new javax.swing.JMenuItem();
         menuCadastroFuncionario = new javax.swing.JMenu();
         MenuCadastroFornec = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         menuCadastroProduto = new javax.swing.JMenuItem();
+        menuListarProdutos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,6 +54,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(MenuCadastroCliente);
 
+        menuListarVendas.setText("Listar Vendas");
+        jMenu1.add(menuListarVendas);
+
         jMenuBar1.add(jMenu1);
 
         menuCadastroFuncionario.setText("Fornecedor");
@@ -67,6 +72,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(menuCadastroFuncionario);
 
         jMenu3.setText("Produto");
+        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu3ActionPerformed(evt);
+            }
+        });
 
         menuCadastroProduto.setText("CadastroProduto");
         menuCadastroProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +85,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu3.add(menuCadastroProduto);
+
+        menuListarProdutos.setText("Listar Produtos");
+        menuListarProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuListarProdutosActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menuListarProdutos);
 
         jMenuBar1.add(jMenu3);
 
@@ -112,6 +130,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
         CadastroProduto telaCadastroProduto = new CadastroProduto();
         telaCadastroProduto.setVisible(true);
     }//GEN-LAST:event_menuCadastroProdutoActionPerformed
+
+    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu3ActionPerformed
+
+    private void menuListarProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuListarProdutosActionPerformed
+        ListagemProdutos telaListagemProdutos = new ListagemProdutos();
+        telaListagemProdutos.setVisible(true);
+    }//GEN-LAST:event_menuListarProdutosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,5 +183,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu menuCadastroFuncionario;
     private javax.swing.JMenuItem menuCadastroProduto;
+    private javax.swing.JMenuItem menuListarProdutos;
+    private javax.swing.JMenuItem menuListarVendas;
     // End of variables declaration//GEN-END:variables
 }
