@@ -5,6 +5,7 @@ public class Produtos {
     
     private String nomeProduto;
     private int id;
+    private Double valorVenda;
 
     public String getNomeProduto() {
         return nomeProduto;
@@ -25,4 +26,14 @@ public class Produtos {
     
     public Produtos() {
     }
+
+    public Double getValorVenda() {
+        return valorVenda;
+    }
+
+    public void setValorVenda(Double valorVenda) {
+        this.valorVenda = valorVenda;
+    }
+    
+    
 }

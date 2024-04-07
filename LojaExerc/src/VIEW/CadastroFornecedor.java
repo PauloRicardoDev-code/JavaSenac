@@ -184,7 +184,7 @@ public class CadastroFornecedor extends javax.swing.JFrame {
         boolean status;
         int resposta;
         
-        fornec.setFornecedor(txtCadastrarFornec.getText());
+        fornec.setFornecedor(txtCadastrarFornec.getText().toUpperCase());
         fornec.setProdutoID(Integer.parseInt(txtCadastrarProdutoID.getText()));
         fornec.setValor(Double.parseDouble(txtCadastrarValor.getText()));
         

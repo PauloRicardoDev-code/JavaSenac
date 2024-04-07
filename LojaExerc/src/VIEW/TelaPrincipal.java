@@ -27,17 +27,60 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        btnCadastrarFornec = new javax.swing.JButton();
+        btnCadastrarClientes = new javax.swing.JButton();
+        btnCadastrarProdutos = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        btnNotaFiscal = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         MenuCadastroCliente = new javax.swing.JMenuItem();
         menuListarVendas = new javax.swing.JMenuItem();
         menuCadastroFuncionario = new javax.swing.JMenu();
         MenuCadastroFornec = new javax.swing.JMenuItem();
+        ListarFornec = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         menuCadastroProduto = new javax.swing.JMenuItem();
         menuListarProdutos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(102, 102, 102));
+
+        jLabel1.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel1.setText("Bem vindo");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        btnCadastrarFornec.setText("Cadastrar Fornecedores");
+        btnCadastrarFornec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarFornecActionPerformed(evt);
+            }
+        });
+
+        btnCadastrarClientes.setText("Cadastrar Clientes");
+        btnCadastrarClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarClientesActionPerformed(evt);
+            }
+        });
+
+        btnCadastrarProdutos.setText("Cadastrar Produtos");
+        btnCadastrarProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarProdutosActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Fechar");
+
+        btnNotaFiscal.setText("Nota Fiscal");
+        btnNotaFiscal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNotaFiscalActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText("Cliente");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
@@ -55,6 +98,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu1.add(MenuCadastroCliente);
 
         menuListarVendas.setText("Listar Vendas");
+        menuListarVendas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuListarVendasActionPerformed(evt);
+            }
+        });
         jMenu1.add(menuListarVendas);
 
         jMenuBar1.add(jMenu1);
@@ -68,6 +116,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         menuCadastroFuncionario.add(MenuCadastroFornec);
+
+        ListarFornec.setText("Listagem Fornecedor");
+        ListarFornec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListarFornecActionPerformed(evt);
+            }
+        });
+        menuCadastroFuncionario.add(ListarFornec);
 
         jMenuBar1.add(menuCadastroFuncionario);
 
@@ -102,11 +158,40 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(195, 195, 195)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnCadastrarFornec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCadastrarProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCadastrarClientes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(21, 21, 21))
+                            .addComponent(btnNotaFiscal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 193, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 545, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnCadastrarProdutos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCadastrarFornec)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCadastrarClientes)
+                .addGap(44, 44, 44)
+                .addComponent(btnNotaFiscal)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addContainerGap())
         );
 
         pack();
@@ -139,6 +224,34 @@ public class TelaPrincipal extends javax.swing.JFrame {
         ListagemProdutos telaListagemProdutos = new ListagemProdutos();
         telaListagemProdutos.setVisible(true);
     }//GEN-LAST:event_menuListarProdutosActionPerformed
+
+    private void menuListarVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuListarVendasActionPerformed
+        ListagemVendas telaListagemVendas = new ListagemVendas();
+        telaListagemVendas.setVisible(true);
+    }//GEN-LAST:event_menuListarVendasActionPerformed
+
+    private void ListarFornecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarFornecActionPerformed
+        ListagemFornecedor telaFornecedor = new ListagemFornecedor();
+        telaFornecedor.setVisible(true);
+    }//GEN-LAST:event_ListarFornecActionPerformed
+
+    private void btnCadastrarProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarProdutosActionPerformed
+        CadastroProduto telaCadastroProduto = new CadastroProduto();
+        telaCadastroProduto.setVisible(true);
+    }//GEN-LAST:event_btnCadastrarProdutosActionPerformed
+
+    private void btnCadastrarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarClientesActionPerformed
+        CadastroCliente telaCadastroCliente = new CadastroCliente();
+        telaCadastroCliente.setVisible(true);
+    }//GEN-LAST:event_btnCadastrarClientesActionPerformed
+
+    private void btnCadastrarFornecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarFornecActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCadastrarFornecActionPerformed
+
+    private void btnNotaFiscalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotaFiscalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNotaFiscalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,8 +289,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem ListarFornec;
     private javax.swing.JMenuItem MenuCadastroCliente;
     private javax.swing.JMenuItem MenuCadastroFornec;
+    private javax.swing.JButton btnCadastrarClientes;
+    private javax.swing.JButton btnCadastrarFornec;
+    private javax.swing.JButton btnCadastrarProdutos;
+    private javax.swing.JButton btnNotaFiscal;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
